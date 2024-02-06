@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemeinsam Geben</title>
+    <meta name="description" content="Teilen Sie ihre Kleidung mit Menschen in Kriesengebieten. Jetzt auch Online Spenden.">
+
+    <!-- css -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- header + nav -->
+<header class="w-100 d-flex align-items-center justify-content-between position-fixed padding-container header-box">
+    <div class="logo">
+        <a href="index.html" title="Startseite Gemeinsam geben">
+            <img src="images/logo.svg" alt="Logo Gemeinsam geben">
+        </a>
+    </div>
+    <svg class="offcanvas-switch d-lg-none" width="35" height="29" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 42">
+        <rect y="0" fill="#FFFFFF" width="50" height="3"/>
+        <rect y="19.5" fill="#FFFFFF" width="50" height="3"/>
+        <rect y="39" fill="#FFFFFF" width="50" height="3"/>
+    </svg>
+    <nav class="d-none d-lg-block">
+        <ul class="d-flex align-items-center m-0 global-menu">
+            <li><a class="text-uppercase text-white ps-5" href="#steps">Wie funktioniers?</a></li>
+            <li><a class="text-uppercase text-white ps-5" href="#form">Jetzt Spenden</a></li>
+            <li><a class="text-uppercase text-white ps-5" href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- section intro -->
+    <section class="bg-primary text-white flex-column-reverse flex-lg-row d-flex align-items-center section-image-text position-relative" id="intro">
+        <div class="text-box col-12 col-lg-6">
+            <p class="mb-2 pt-3 pt-lg-5"><span class="text-large">Sei dabei!</span></p>
+            <h1>Verschenke Glück</h1>
+            <p>Unsere Mission ist es zusammen mit hilfsbereiten Spendern, Kleidung zu sammeln und diese gerecht zu
+                verteilen. Jeder kann selbst entscheiden, in welche aktuelle Krisenregion die Kleiderspende gesendet
+                werden soll. Neben dem Teilen von Kleidung, geht es auch um das Teilen von Hoffnung und Unterstützung.
+            </p>
+            <p>
+                Registriere deine Kleiderspende jetzt und sei Teil dieser bewegenden Initiative. Gemeinsam können wir
+                einen positiven Einfluss auf Menschen in Not weltweit haben.
+            </p>
+            <p>
+                DANKE
+            </p>
+        </div>
+        <div class="col-12 col-lg-6 header-image position-relative">
+            <div class="overlay position-absolute w-100 d-none d-lg-block"></div>
+            <div class="cover-image">
+                <img src="images/header-image.jpg" alt="Kleidung teilen">
+            </div>
+        </div>
+        <a class="scroll-down-arrow position-absolute" href="#steps" title="Startseite Gemeinsam geben">
+            <img src="images/scroll-down-arrow.svg" alt="Scroll down">
+        </a>
+    </section>
+
+    <!-- section steps -->
+    <section class="bg-white text-primary padding-container pt-medium pb-medium w-100" id="steps">
+        <div class="row-large row">
+            <div class="col-lg-4 text-center">
+                <h2>1.</h2>
+                <p class="mt-lg-4"><strong>Kleidung vorbereiten</strong></p>
+                <p class="mb-0">Sammeln Sie Ihre sauberen und gut erhaltenen Kleidungen in einem Karton oder festem
+                    Sack. Bitte
+                    trennen Sie falls möglich unterschiedliche Arten von Kleidung.</p>
+            </div>
+            <div class="col-lg-4 text-center mt-5 mt-lg-0">
+                <h2>2.</h2>
+                <p class="mt-lg-4"><strong>Online-Checkin durchführen</strong></p>
+                <p class="mb-0">Besuchen Sie unser Portal und registrieren Sie dort Ihre Kleiderspende. Füllen Sie das
+                    Formular aus
+                    und entscheiden selbst wohin Ihre Spende gesendet werden soll.</p>
+            </div>
+            <div class="col-lg-4 text-center mt-5 mt-lg-0">
+                <h2>3.</h2>
+                <p class="mt-lg-4"><strong>Abholung vereinbaren</strong></p>
+                <p class="mb-0">Nachdem Sie Ihre Spende registriert haben, vereinbaren Sie bequem online einen
+                    Abholtermin. Unser
+                    Team wird Ihre Kleidung dort abholen kommen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section form -->
+    <section class="text-white padding-container pt-large pb-large w-100 section-form" id="form">
+        <div class="container px-0">
+            <h2>Ihre Kleiderspende</h2>
+            <form action="danke.html" method="get" class="row" onsubmit="return checkPlz();">
+
+                <div class="col-sm-6 mt-3 pt-sm-1">
+                    <input class="form-control" type="text" name="firstname" placeholder="Vorname" required>
+                </div>
+
+                <div class="col-sm-6 mt-3 pt-sm-1">
+                    <input class="form-control" type="text" name="lastname" placeholder="Nachname" required>
+                </div>
+
+                <div class="mt-3 pt-sm-1">
+                    <input class="form-control" type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <label class="d-flex align-items-center form-radio mt-4 mt-md-5">
+                    <input class="me-3" type="radio" name="lieferoption" value="Übergabe an der Geschäftsstelle" checked>
+                    <strong>Übergabe an der Geschäftsstelle</strong>
+                </label>
+
+                <label class="d-flex align-items-center form-radio mt-2 mt-sm-3">
+                    <input class="me-3" type="radio" name="lieferoption" value="Abholung">
+                    <strong>Abholung</strong>
+                </label>
+
+                <div class="mx-0 px-0 hiding-fields d-none row">
+
+                    <div class="col-sm-6 mt-4 pt-sm-3">
+                        <input class="form-control" type="text" name="strasse" placeholder="Straße">
+                    </div>
+
+                    <div class="col-sm-6 mt-sm-4 pt-sm-3 mt-3">
+                        <input class="form-control" type="text" name="hausnummer" placeholder="Hausnummer">
+                    </div>
+
+                    <div class="col-sm-6 mt-3 pt-sm-1">
+                        <input class="form-control" type="text" name="plz" placeholder="PLZ">
+                    </div>
+
+                    <div class="col-sm-6 mt-3 pt-md1">
+                        <input class="form-control" type="text" name="ort" placeholder="Ort">
+                    </div>
+
+                    <span class="d-none error-form mt-2">Die angegebene Adresse liegt außerhalb unseres Abholservices.</span>
+
+                </div>
+
+                <div class="col-12 mt-3 mt-sm-4 pt-sm-3">
+                    <select class="form-control" name="artderkleidung" required>
+                        <option value="" selected disabled>Art der Kleidung</option>
+                        <option value="Pullover">Pullover</option>
+                        <option value="T-Shirts">T-Shirts</option>
+                        <option value="Hosen">Hosen</option>
+                        <option value="Shorts">Shorts</option>
+                        <option value="Kleider">Kleider</option>
+                        <option value="Jacken">Jacken</option>
+                        <option value="Hemden & Bluse">Hemden & Blusen</option>
+                        <option value="Schuhe">Schuhe</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+
+                <div class="col-12 mt-3 pt-sm-1">
+                    <select class="form-control" name="kriesengebiet" required>
+                        <option value="" selected disabled>Krisengebiet</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Irak">Irak</option>
+                        <option value="Jemen">Jemen</option>
+                        <option value="Libyen">Libyen</option>
+                        <option value="Mali">Mali</option>
+                        <option value="Myanmar">Myanmar</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="Südsudan">Südsudan</option>
+                        <option value="Syrien">Syrien</option>
+                        <option value="Zentralafrikanische Republik">Zentralafrikanische Republik</option>
+                    </select>
+                </div>
+
+                <div class="col-12 mt-4 pt-3">
+                    <button type="submit" class="btn w-100 text-uppercase">Jetzt spenden</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- section contact -->
+    <section class="bg-white text-primary padding-container pt-medium pb-medium w-100 section-contact" id="contact">
+        <div class="align-items-center justify-content-between row">
+
+            <div class="col-12 col-xl-auto text-left mb-4 mb-md-5 mb-xl-0">
+                <h2>Contact us</h2>
+                <p class="m-0">
+                    <a href="tel:00393458939648">+39 345 89 39 648</a><br>
+                    <a href="mailto:info@gemeinsam-geben.com">info@gemeinsam-geben.com</a>
+                </p>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-auto mb-4 mb-md-0 d-sm-flex align-items-center">
+                <svg class="d-block mb-1 mb-sm-0 me-sm-4" width="40" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.17 45.58">
+                    <path fill="#B7A89B"
+                          d="M15.08,21.61c-3.6,0-6.53-2.93-6.53-6.53s2.93-6.53,6.53-6.53,6.53,2.93,6.53,6.53-2.93,6.53-6.53,6.53ZM15.08,10.56c-2.5,0-4.53,2.03-4.53,4.53s2.03,4.53,4.53,4.53,4.53-2.03,4.53-4.53-2.03-4.53-4.53-4.53Z"/>
+                    <path fill="#B7A89B"
+                          d="M15.08,45.58l-.83-1.23c-.58-.86-14.25-21.27-14.25-29.26S6.77,0,15.08,0s15.08,6.77,15.08,15.08-13.67,28.4-14.25,29.26l-.83,1.23ZM15.08,2C7.87,2,2,7.87,2,15.08c0,6.32,10.09,22.28,13.08,26.89,3-4.6,13.08-20.57,13.08-26.89,0-7.21-5.87-13.08-13.08-13.08Z"/>
+                </svg>
+                <p class="m-0">
+                    <strong>Hauptsitz:</strong> Musterstraße 23,<br>
+                    39100 Bozen - Südtirol - Italien
+                </p>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-auto mb-4 mb-sm-0 d-sm-flex align-items-center">
+                <svg class="d-block mb-1 mb-sm-0 me-sm-4" width="40" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.17 45.58">
+                    <path fill="#B7A89B"
+                          d="M15.08,21.61c-3.6,0-6.53-2.93-6.53-6.53s2.93-6.53,6.53-6.53,6.53,2.93,6.53,6.53-2.93,6.53-6.53,6.53ZM15.08,10.56c-2.5,0-4.53,2.03-4.53,4.53s2.03,4.53,4.53,4.53,4.53-2.03,4.53-4.53-2.03-4.53-4.53-4.53Z"/>
+                    <path fill="#B7A89B"
+                          d="M15.08,45.58l-.83-1.23c-.58-.86-14.25-21.27-14.25-29.26S6.77,0,15.08,0s15.08,6.77,15.08,15.08-13.67,28.4-14.25,29.26l-.83,1.23ZM15.08,2C7.87,2,2,7.87,2,15.08c0,6.32,10.09,22.28,13.08,26.89,3-4.6,13.08-20.57,13.08-26.89,0-7.21-5.87-13.08-13.08-13.08Z"/>
+                </svg>
+                <p class="m-0">
+                    <strong>Außenfiliale:</strong> Marktplatz 12,<br>
+                    39012 Meran - Südtirol - Italien
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- footer -->
+<footer class="bg-secondary text-white padding-container">
+    <nav>
+        <ul class="m-0 d-flex justify-content-center justify-content-md-end py-4 px-0">
+            <li class="pe-3 pe-sm-5"><a href="impressum.html#privacy">Datenschutz</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- js -->
+<script src="custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke Gemeinsam Geben</title>
+
+    <!-- css -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- header + nav -->
+<header class="w-100 d-flex align-items-center justify-content-between position-fixed padding-container header-box">
+    <div class="logo">
+        <a href="index.html" title="Startseite Gemeinsam geben">
+            <img src="images/logo.svg" alt="Logo Gemeinsam geben">
+        </a>
+    </div>
+    <svg class="offcanvas-switch d-lg-none" width="35" height="29" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 42">
+        <rect y="0" fill="#FFFFFF" width="50" height="3"/>
+        <rect y="19.5" fill="#FFFFFF" width="50" height="3"/>
+        <rect y="39" fill="#FFFFFF" width="50" height="3"/>
+    </svg>
+    <nav class="d-none d-lg-block">
+        <ul class="d-flex align-items-center m-0 global-menu">
+            <li><a class="text-uppercase text-white ps-5" href="index.html#steps">Wie funktioniers?</a></li>
+            <li><a class="text-uppercase text-white ps-5" href="index.html#form">Jetzt Spenden</a></li>
+            <li><a class="text-uppercase text-white ps-5" href="index.html#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="thankyou-page">
+
+    <!-- section intro -->
+    <section class="bg-primary text-white flex-column-reverse flex-lg-row d-flex align-items-center section-image-text position-relative" id="intro">
+        <div class="text-box col-12 col-lg-6">
+            <p class="mb-2 pt-3 pt-lg-5"><span class="text-large">Gemeinsam Geben</span></p>
+            <h1>Vielen Dank für Ihre Kleider Registrierung!</h1>
+            <p id="text-abholung" class="d-none">Wir werden Sie in Kürze kontaktieren,<br> um einen Abholtermin zu
+                vereinbaren.</p>
+            <p id="text-store" class="d-none">Bitte wenden Sie sich an unsere Mitarbeiter,<br> um Ihre Spende
+                abzuschließen.</p>
+            <p>
+                <strong>Name:</strong> <span id="firstname"></span><br>
+                <strong>Nachname:</strong> <span id="lastname"></span><br>
+                <strong>Email:</strong> <span id="email"></span>
+            </p>
+
+            <p>
+                <strong>Lieferoption:</strong> <span id="lieferoption"></span>
+            </p>
+
+            <div id="adresse" class="d-none">
+                <p>
+                    <strong>Straße:</strong> <span id="strasse"></span><br>
+                    <strong>Hausnummer:</strong> <span id="hausnummer"></span><br>
+                    <strong>PLZ:</strong> <span id="plz"></span><br>
+                    <strong>Ort:</strong> <span id="ort"></span><br>
+                </p>
+            </div>
+            <p>
+                <strong>Art der Kleidung:</strong> <span id="artderkleidung"></span><br>
+                <strong>Kriesengebiet:</strong> <span id="kriesengebiet"></span>
+            </p>
+
+        </div>
+        <div class="col-12 col-lg-6 header-image position-relative">
+            <div class="overlay position-absolute w-100 d-none d-lg-block"></div>
+            <div class="cover-image">
+                <img src="images/header-image-danke.jpg">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- section contact -->
+    <section class="bg-white text-primary padding-container pt-medium pb-medium w-100 section-contact" id="contact">
+        <div class="align-items-center justify-content-between row">
+
+            <div class="col-12 col-xl-auto text-left mb-4 mb-md-5 mb-xl-0">
+                <h2>Contact us</h2>
+                <p class="m-0">
+                    <a href="tel:00393458939648">+39 345 89 39 648</a><br>
+                    <a href="mailto:info@gemeinsam-geben.com">info@gemeinsam-geben.com</a>
+                </p>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-auto mb-4 mb-md-0 d-sm-flex align-items-center">
+                <svg class="d-block mb-1 mb-sm-0 me-sm-4" width="40" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.17 45.58">
+                    <path fill="#B7A89B"
+                          d="M15.08,21.61c-3.6,0-6.53-2.93-6.53-6.53s2.93-6.53,6.53-6.53,6.53,2.93,6.53,6.53-2.93,6.53-6.53,6.53ZM15.08,10.56c-2.5,0-4.53,2.03-4.53,4.53s2.03,4.53,4.53,4.53,4.53-2.03,4.53-4.53-2.03-4.53-4.53-4.53Z"/>
+                    <path fill="#B7A89B"
+                          d="M15.08,45.58l-.83-1.23c-.58-.86-14.25-21.27-14.25-29.26S6.77,0,15.08,0s15.08,6.77,15.08,15.08-13.67,28.4-14.25,29.26l-.83,1.23ZM15.08,2C7.87,2,2,7.87,2,15.08c0,6.32,10.09,22.28,13.08,26.89,3-4.6,13.08-20.57,13.08-26.89,0-7.21-5.87-13.08-13.08-13.08Z"/>
+                </svg>
+                <p class="m-0">
+                    <strong>Hauptsitz:</strong> Musterstraße 23,<br>
+                    39100 Bozen - Südtirol - Italien
+                </p>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-auto mb-4 mb-sm-0 d-sm-flex align-items-center">
+                <svg class="d-block mb-1 mb-sm-0 me-sm-4" width="40" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.17 45.58">
+                    <path fill="#B7A89B"
+                          d="M15.08,21.61c-3.6,0-6.53-2.93-6.53-6.53s2.93-6.53,6.53-6.53,6.53,2.93,6.53,6.53-2.93,6.53-6.53,6.53ZM15.08,10.56c-2.5,0-4.53,2.03-4.53,4.53s2.03,4.53,4.53,4.53,4.53-2.03,4.53-4.53-2.03-4.53-4.53-4.53Z"/>
+                    <path fill="#B7A89B"
+                          d="M15.08,45.58l-.83-1.23c-.58-.86-14.25-21.27-14.25-29.26S6.77,0,15.08,0s15.08,6.77,15.08,15.08-13.67,28.4-14.25,29.26l-.83,1.23ZM15.08,2C7.87,2,2,7.87,2,15.08c0,6.32,10.09,22.28,13.08,26.89,3-4.6,13.08-20.57,13.08-26.89,0-7.21-5.87-13.08-13.08-13.08Z"/>
+                </svg>
+                <p class="m-0">
+                    <strong>Außenfiliale:</strong> Marktplatz 12,<br>
+                    39012 Meran - Südtirol - Italien
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- footer -->
+<footer class="bg-secondary text-white padding-container">
+    <nav>
+        <ul class="m-0 d-flex justify-content-center justify-content-md-end py-4 px-0">
+            <li class="pe-3 pe-sm-5"><a href="impressum.html#privacy">Datenschutz</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- js -->
+<script src="custom.js"></script>
+
+</body>
+</html>
